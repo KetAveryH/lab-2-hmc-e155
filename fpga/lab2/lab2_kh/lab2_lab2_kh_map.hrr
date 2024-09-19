@@ -1,0 +1,38 @@
+---------------------------------------------------
+Report for cell lab1_kh
+   Instance path: lab1_kh
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         47        100.0
+                               LUTGATE	         21        100.0
+                                LUTCCU	         26        100.0
+                                 IOBUF	         17        100.0
+                                PFUREG	         27        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              Hz_blink	          1        76.6
+                              led_comb	          1         4.3
+                     seven_seg_display	          1        14.9
+---------------------------------------------------
+Report for cell Hz_blink
+   Instance path: lab1_kh/u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         36        76.6
+                               LUTGATE	         10        47.6
+                                LUTCCU	         26        100.0
+                                PFUREG	         27        100.0
+---------------------------------------------------
+Report for cell seven_seg_display
+   Instance path: lab1_kh/u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        14.9
+                               LUTGATE	          7        33.3
+---------------------------------------------------
+Report for cell led_comb
+   Instance path: lab1_kh/u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         4.3
+                               LUTGATE	          2         9.5

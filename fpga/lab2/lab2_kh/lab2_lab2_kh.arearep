@@ -1,0 +1,41 @@
+----------------------------------------------------------------------
+Report for cell lab1_kh.TECH
+Register bits:  27 of 5280 (0.511%)
+I/O cells:      17
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        13          100.0
+                            FD1P3XZ        27          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         5          100.0
+                               LUT4        19          100.0
+                                 OB        12          100.0
+SUB MODULES
+                           Hz_blink         1
+                           led_comb         1
+                  seven_seg_display         1
+                              TOTAL        80
+----------------------------------------------------------------------
+Report for cell Hz_blink.v1
+Instance Path : u1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        13          100.0
+                            FD1P3XZ        27          100.0
+                         HSOSC_CORE         1          100.0
+                               LUT4        10           52.6
+                              TOTAL        51
+----------------------------------------------------------------------
+Report for cell seven_seg_display.v1
+Instance Path : u3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           36.8
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell led_comb.v1
+Instance Path : u2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2           10.5
+                              TOTAL         2
