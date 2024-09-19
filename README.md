@@ -1,1 +1,1 @@
-Lab 1 HMC155 project!
+Lab 2 HMC155 project!
