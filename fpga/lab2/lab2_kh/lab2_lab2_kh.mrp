@@ -1,41 +1,42 @@
 
                          Lattice Mapping Report File
 
-Design:  lab1_kh
+Design:  lab2_kh
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:  High-Performance_1.2V
 
-Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Sep 18 22:26:34 2024
+Mapper:    version Radiant Software (64-bit) 2024.1.1.259.1
+Mapped on: Mon Sep 23 02:48:03 2024
 
 Design Information
 ------------------
 
 Command line:   map -pdc
-     C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc -i
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc -i
      lab2_lab2_kh_syn.udb -o lab2_lab2_kh_map.udb -mp lab2_lab2_kh.mrp -hierrpt
      -gui -msgset
-     C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/promote.xml
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/promote.xml
 
 Design Summary
 --------------
 
-   Number of slice registers:  27 out of  5280 (1%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            47 out of  5280 (1%)
-      Number of logic LUT4s:              21
+   Number of slice registers:  31 out of  5280 (1%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:            53 out of  5280 (1%)
+      Number of logic LUT4s:              22
+      Number of inserted feedthru LUT4s:   5
       Number of ripple logic:             13 (26 LUT4s)
-   Number of IO sites used:   17 out of 39 (44%)
-      Number of IO sites used for general PIO: 17
+   Number of IO sites used:   18 out of 39 (46%)
+      Number of IO sites used for general PIO: 18
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 17 out of 36 (47%)
+      Number of IO sites used for PIO+I3C: 18 out of 36 (50%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 17 out of 39 (44%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 18 out of 39 (46%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
@@ -49,17 +50,16 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net u1.int_osc: 15 loads, 15 rising, 0 falling (Driver: Pin
-     u1.hf_osc/CLKHF)
-   Number of Clock Enables:  2
-      Net u1.n142: 2 loads, 2 SLICEs
+      Net int_osc: 20 loads, 20 rising, 0 falling (Driver: Pin u1.hf_osc/CLKHF)
+   Number of Clock Enables:  1
       Net seg_pad[0].vcc: 1 loads, 0 SLICEs
    Number of LSRs:  2
-      Net u1.n37: 13 loads, 13 SLICEs
-      Net u1.n369: 2 loads, 2 SLICEs
+      Net n174: 4 loads, 4 SLICEs
+      Net u1.n32: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net u1.n37: 15 loads
-      Net s_c_0: 8 loads
+      Net u1.n32: 14 loads
+      Net u3.s_select[0]: 7 loads
+      Net u3.s_select[1]: 7 loads
 
                                     Page 1
 
@@ -69,27 +69,45 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net s_c_1: 8 loads
-      Net s_c_2: 8 loads
-      Net s_c_3: 8 loads
+      Net u3.s_select[2]: 7 loads
+      Net u3.s_select[3]: 7 loads
+      Net s1_c_0: 5 loads
+      Net n174: 4 loads
+      Net s1_c_1: 4 loads
+      Net s1_c_2: 3 loads
       Net seg_pad[0].vcc: 3 loads
-      Net reset_c: 2 loads
-      Net switch_c_0: 2 loads
-      Net switch_c_1: 2 loads
-      Net u1.counter[23]: 2 loads
 
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  8
    Number of criticals: 0
    Number of errors:    0
 
 Design Errors/Criticals/Warnings
 --------------------------------
 
-   No error, critical, or warning presents.
+WARNING <1026001> - map:
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc (2)
+     : No port matched 'display_select[1]'.
+WARNING <1026001> - map:
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc
+     (18) : No port matched 'display_select[0]'.
+WARNING <1027013> - map: No port matched 'display_select[1]'.
+WARNING <1026001> - map:
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc (2)
+     : Can't resolve object 'display_select[1]' in constraint 'ldc_set_location
+     -site {41} [get_ports {display_select[1]}]'.
+WARNING <1027013> - map: No port matched 'display_select[0]'.
+WARNING <1026001> - map:
+     C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2kh.pdc
+     (18) : Can't resolve object 'display_select[0]' in constraint 'ldc_set_port
+     -iobuf {DRIVE=8} [get_ports {display_select[0]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {41}
+     [get_ports {display_select[1]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {DRIVE=8} [get_ports {display_select[0]}]'.
 
 IO (PIO) Attributes
 -------------------
@@ -98,17 +116,26 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s[0]                | INPUT     |           |       |       |           |
+| s1[0]               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s[1]                | INPUT     |           |       |       |           |
+| s1[1]               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s[2]                | INPUT     |           |       |       |           |
+| s1[2]               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| s[3]                | INPUT     |           |       |       |           |
+| s1[3]               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[0]              | OUTPUT    |           |       |       |           |
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -122,25 +149,23 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[6]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| switch[0]           | OUTPUT    |           |       |       |           |
+| display_select_c[0] | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| switch[1]           | OUTPUT    |           |       |       |           |
+| display_select_c[1] | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[0]              | OUTPUT    |           |       |       |           |
-
-                                    Page 2
-
-
-
-
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| led[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block s1_pad[0].vlo_inst was optimized away.
 
 OSC Summary
 -----------
@@ -149,7 +174,7 @@ OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            u1/hf_osc
   Power UP:                            NODE     seg_pad[0].vcc
   Enable Signal:                       NODE     seg_pad[0].vcc
-  OSC Output:                          NODE     u1.int_osc
+  OSC Output:                          NODE     int_osc
   DIV Setting:                                  01
 
 ASIC Components
@@ -157,12 +182,24 @@ ASIC Components
 
 Instance Name: u1/hf_osc
          Type: HFOSC
+Instance Name: u1/display_select_i1
+         Type: IOLOGIC
 
 Constraint Summary
 ------------------
 
-   Total number of constraints: 16
-   Total number of constraints dropped: 0
+   Total number of constraints: 21
+   Total number of constraints dropped: 2
+   Dropped constraints are:
+     ldc_set_location -site {41} [get_ports {display_select[1]}]
+     ldc_set_port -iobuf {DRIVE=8} [get_ports {display_select[0]}]
+
+                                    Page 3
+
+
+
+
+
 
 Run Time and Memory Usage
 -------------------------
@@ -170,7 +207,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: 57fd89e6c9099436ff5998b586320d6badb834
+Checksum -- map: d159d576c7768c427bc68d36372f015890ad6e24
 
 
 
@@ -194,7 +231,36 @@ Checksum -- map: 57fd89e6c9099436ff5998b586320d6badb834
 
 
 
-                                    Page 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

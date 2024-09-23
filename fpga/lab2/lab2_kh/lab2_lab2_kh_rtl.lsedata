@@ -1,7 +1,7 @@
-<top name = "lab1_kh"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "lab2_kh"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "u1/int_osc"  type = "net" />
+    <clockitem name = "int_osc"  type = "net" />
 </clocks>
 
 <!--

@@ -1,13 +1,13 @@
-BITGEN: Bitstream Generator Radiant Software (64-bit) 2024.1.0.34.2
+BITGEN: Bitstream Generator Radiant Software (64-bit) 2024.1.1.259.1
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Sep 18 22:26:47 2024
+Mon Sep 23 02:48:13 2024
 
 
-Command: bitgen -w -gui -msgset C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/promote.xml -freq 0 lab2_lab2_kh.udb C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/lab2_kh/lab2_lab2_kh 
+Command: bitgen -w -gui -msgset C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/promote.xml -freq 0 lab2_lab2_kh.udb C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2_kh/lab2_lab2_kh 
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.
@@ -21,6 +21,5 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/lab2_kh/lab2_lab2_kh.bin".
-INFO <1081100> - Bitstream authenticated.
+Saving bit stream in "C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2_kh/lab2_lab2_kh.bin".
 Bitstream generation complete!

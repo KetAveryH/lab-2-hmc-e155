@@ -36,14 +36,14 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/lab2_kh" "C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2"
+-path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/lab2_kh" "C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2"
 -ver "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2/source/lab2_kh/top.sv"
+-sver "C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2/source/lab2_kh/top.sv"
 
 
--path "C:/Users/khollingsworth/Desktop/lab-2-hmc-e155/fpga/lab2"
--top lab1_kh
+-path "C:/Users/holli/Desktop/Repositories/lab-2-hmc-e155/fpga/lab2"
+-top lab2_kh
 -udb "lab2_lab2_kh_rtl.udb"
 -output_hdl "lab2_lab2_kh.vm"
 
